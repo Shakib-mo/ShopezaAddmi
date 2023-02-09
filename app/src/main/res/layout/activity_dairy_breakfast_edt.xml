@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dairy_Breakfast_Edt_Act">
+
+    <LinearLayout
+        android:id="@+id/l1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal"
+        android:background="@color/and">
+
+        <ImageView
+            android:id="@+id/im_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back"
+            android:layout_margin="7dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  Dairy And Breakfast     EDT"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_weight="4"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="7dp"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/edt_dairy_"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/l1"
+        android:hint="Enter Dairy Name"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_margin="20dp"/>
+
+    <EditText
+        android:id="@+id/edt_dairy_gram"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/edt_dairy_"
+        android:hint="Enter Dairy Gram  &amp;  kg"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_margin="20dp"/>
+
+    <EditText
+        android:id="@+id/edt_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/edt_dairy_gram"
+        android:hint="Enter Dairy price"
+        android:inputType="number"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_margin="20dp"/>
+
+    <EditText
+        android:id="@+id/edt_offer_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/edt_price"
+        android:hint="Enter Dairy offer Price"
+        android:inputType="number"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_margin="20dp"/>
+
+    <Button
+        android:id="@+id/bt_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textAllCaps="false"
+        android:text="Save"
+        android:textColor="@color/blue"
+        android:background="?actionBarItemBackground"
+        app:layout_constraintTop_toBottomOf="@id/edt_offer_price"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

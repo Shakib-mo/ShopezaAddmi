@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/im_cat_"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/cold_drink1"/>
+
+    <TextView
+        android:id="@+id/te_cat_id_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="paknary"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:textColor="@color/black"/>
+
+</LinearLayout>
