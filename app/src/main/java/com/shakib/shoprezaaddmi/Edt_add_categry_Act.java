@@ -29,10 +29,10 @@ public class Edt_add_categry_Act extends AppCompatActivity {
         requestQueue = Volley.newRequestQueue(Edt_add_categry_Act.this);
         JSONObject object = new JSONObject();
         try {
-            object.put("name",name);
+            object.put("cat_name",name);
         }catch (Exception e){
         }
-            String url = "https://shakibmohd.000webhostapp.com/api_shop/reza_save.php";
+            String url = "https://shakib0000087655444.000webhostapp.com/shop_reza/category_save.php";
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, object, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {

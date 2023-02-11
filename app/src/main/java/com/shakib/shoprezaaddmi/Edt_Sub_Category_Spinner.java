@@ -49,7 +49,7 @@ public class Edt_Sub_Category_Spinner extends AppCompatActivity {
 
     void Display_Data_spin(){
             requestQueue = Volley.newRequestQueue(Edt_Sub_Category_Spinner.this);
-            String url = "https://shakibmohd.000webhostapp.com/api_shop/reza_display.php";
+            String url = "https://shakib0000087655444.000webhostapp.com/shop_reza/display_cotegory.php";
             JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.POST, url, null, new Response.Listener<JSONArray>() {
                 @Override
                 public void onResponse(JSONArray response) {
@@ -58,8 +58,8 @@ public class Edt_Sub_Category_Spinner extends AppCompatActivity {
                     try {
                         for (int i = 0;i<array.length();i++){
                             object =array.getJSONObject(i);
-                            arrayList.add(object.getString("name"));
-                            arrayList1.add(object.getString("catid"));
+                            arrayList.add(object.getString("cat_name"));
+                            arrayList1.add(object.getString("cat_id"));
                         }
                         spinner.setAdapter(new ArrayAdapter<String>(Edt_Sub_Category_Spinner.this,
                             android.R.layout.simple_spinner_dropdown_item,arrayList));
@@ -92,7 +92,7 @@ public class Edt_Sub_Category_Spinner extends AppCompatActivity {
                         object = array.getJSONObject(i);
 
                         array_display.add(new SubCotegory_Get_Set(object.getString("subcatid"),object.getString("sub_name"),
-                                object.getString("catid"),object.getString("pic")));
+                                object.getString("cat_id"),object.getString("pic")));
                     }
                     adapter = new MySubcategory_Adapter(Edt_Sub_Category_Spinner.this,array_display);
                     recyclerView.setAdapter(adapter);

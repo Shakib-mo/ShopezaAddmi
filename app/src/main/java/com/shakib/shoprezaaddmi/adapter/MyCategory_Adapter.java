@@ -151,12 +151,12 @@ public class MyCategory_Adapter extends RecyclerView.Adapter<MyCategory_Adapter.
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        String url = "https://shakibmohd.000webhostapp.com/api_shop/reza_delete.php";
+        String url = "https://shakib0000087655444.000webhostapp.com/shop_reza/category_delete.php";
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, object, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
                 try {
-                    Toast.makeText(context, response.getString("Status"), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, response.getString("status"), Toast.LENGTH_SHORT).show();
                     notifyItemChanged(po);
                     notifyDataSetChanged();
                     Deleted_co(po);

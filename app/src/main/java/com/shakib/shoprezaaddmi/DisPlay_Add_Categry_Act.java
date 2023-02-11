@@ -49,7 +49,7 @@ public class DisPlay_Add_Categry_Act extends AppCompatActivity {
     void Display_Data(){
         requestQueue = Volley.newRequestQueue(DisPlay_Add_Categry_Act.this);
         progressBar.setVisibility(View.VISIBLE);
-        String url = "https://shakibmohd.000webhostapp.com/api_shop/reza_display.php";
+        String url = "https://shakib0000087655444.000webhostapp.com/shop_reza/display_cotegory.php";
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.POST, url, null, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
@@ -58,7 +58,7 @@ public class DisPlay_Add_Categry_Act extends AppCompatActivity {
                try {
                    for (int i = 0;i<array.length();i++){
                        object =array.getJSONObject(i);
-                       arrayList.add(new Category_Set_get(object.getString("catid"),object.getString("name"),
+                       arrayList.add(new Category_Set_get(object.getString("cat_id"),object.getString("cat_name"),
                                object.getString("pic")));
                    }
                    adapter = new MyCategory_Adapter(DisPlay_Add_Categry_Act.this,arrayList);
@@ -81,7 +81,7 @@ public class DisPlay_Add_Categry_Act extends AppCompatActivity {
     }
 
     void Save_pic(String cat,String pic){
-        String Url = "https://shakibmohd.000webhostapp.com/api_shop/cat_image.php";
+        String Url = "https://shakib0000087655444.000webhostapp.com/shop_reza/cotegory_pic.php";
         requestQueue_pic = Volley.newRequestQueue(DisPlay_Add_Categry_Act.this);
         JSONObject object = new JSONObject();
         try {
